@@ -246,14 +246,42 @@
     <div class="container reservation-wrapper">
         <div class="reservation-form-box">
             <h2>Table Reservation</h2>
-            <form class="reservation-form">
-                <input type="text" placeholder="Full Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <input type="number" placeholder="Guests" min="1" max="10" required>
-                <input type="date" required>
-                <input type="time" required>
-                <button class="reserve-btn">Reserve Now</button>
-            </form>
+                <form class="reservation-form">
+
+                    <!-- Name: letters only -->
+                    <input 
+                        type="text"
+                        placeholder="Full Name"
+                        required
+                        pattern="[A-Za-z ]+"
+                        title="Name should contain letters only"
+                    >
+
+                    <!-- Phone: numbers only -->
+                    <input
+                        type="tel"
+                        placeholder="Phone Number"
+                        required
+                        pattern="[0-9]{10}"
+                        inputmode="numeric"
+                        title="Enter a 10-digit mobile number"
+                    >
+
+                    <!-- Guests: numbers only -->
+                    <input
+                        type="number"
+                        placeholder="Guests"
+                        min="1"
+                        max="10"
+                        required
+                    >
+
+                    <input type="date" required>
+                    <input type="time" required>
+
+                    <button class="reserve-btn">Reserve Now</button>
+                </form>
+
         </div>
     </div>
 </section>
@@ -270,20 +298,43 @@
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="section contact container">
     <h2>Contact Us</h2>
+
     <div class="contact-grid">
         <div class="contact-info">
             <p><strong>Address:</strong> 1st Floor, Above Canteen</p>
             <p><strong>Phone:</strong> +91 98765 43210</p>
             <p><strong>Email:</strong> zestybites@gmail.com</p>
         </div>
+
         <div class="contact-form">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            <button>Submit</button>
+            <!-- Name: letters only -->
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+                pattern="[A-Za-z ]+"
+                title="Only alphabets allowed"
+            >
+
+            <!-- Email: proper email validation -->
+            <input
+                type="email"
+                placeholder="Email"
+                required
+            >
+
+            <!-- Message -->
+            <textarea
+                placeholder="Message"
+                required
+                minlength="5"
+            ></textarea>
+
+            <button type="submit">Submit</button>
         </div>
     </div>
 </section>
+
 
 </main>
 
