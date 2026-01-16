@@ -242,105 +242,178 @@
 
 
 <!-- ================= RESERVATION ================= -->
-<section id="reservation" class="reservation-section">
-    <div class="container reservation-wrapper">
-        <div class="reservation-form-box">
-            <h2>Table Reservation</h2>
-                <form class="reservation-form">
+ <!-- RESERVATION SECTION -->
+        <section id="reservation" class="reservation-section">
+            <div class="container reservation-wrapper">
 
-                    <!-- Name: letters only -->
-                    <input 
-                        type="text"
-                        placeholder="Full Name"
-                        required
-                        pattern="[A-Za-z ]+"
-                        title="Name should contain letters only"
-                    >
+                <!-- Left: Reservation Form -->
+                <div class="reservation-form-box">
+                    <h2>Dine-In Table Reservation</h2>
+                    <p class="sub-text">Reserve your table in advance and enjoy a seamless dining experience.</p>
 
-                    <!-- Phone: numbers only -->
-                    <input
-                        type="tel"
-                        placeholder="Phone Number"
-                        required
-                        pattern="[0-9]{10}"
-                        inputmode="numeric"
-                        title="Enter a 10-digit mobile number"
-                    >
+                    <form class="reservation-form">
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" placeholder="Enter your name" required>
+                        </div>
 
-                    <!-- Guests: numbers only -->
-                    <input
-                        type="number"
-                        placeholder="Guests"
-                        min="1"
-                        max="10"
-                        required
-                    >
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter mobile number" required>
+                        </div>
 
-                    <input type="date" required>
-                    <input type="time" required>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <input type="number" id="guests" min="1" max="20" placeholder="e.g., 4" required>
+                        </div>
 
-                    <button class="reserve-btn">Reserve Now</button>
-                </form>
+                        <div class="form-group">
+                            <label for="date">Reservation Date</label>
+                            <input type="date" id="date" required>
+                        </div>
 
-        </div>
-    </div>
-</section>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <input type="time" id="time" required>
+                        </div>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section about container">
-    <h2>About ZestyBites</h2>
-    <p>
-        ZestyBites delivers quality food using traditional recipes and modern techniques.
-        We focus on taste, hygiene, and customer satisfaction.
-    </p>
-</section>
+                        <button type="submit" class="reserve-btn">Reserve Now</button>
+                    </form>
+                </div>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section contact container">
-    <h2>Contact Us</h2>
+                <!-- Right: Image -->
+                <div class="reservation-image-box">
+                    <img src="images/dining-room.jpg" alt="dining-room Image">
+                    <img src="images/dining-room1.jpg" alt="dining-room1 Image">
+                  
+                </div>
 
-    <div class="contact-grid">
-        <div class="contact-info">
-            <p><strong>Address:</strong> 1st Floor, Above Canteen</p>
-            <p><strong>Phone:</strong> +91 98765 43210</p>
-            <p><strong>Email:</strong> zestybites@gmail.com</p>
-        </div>
+            </div>
+        </section>
 
-        <div class="contact-form">
-            <!-- Name: letters only -->
-            <input
-                type="text"
-                placeholder="Your Name"
-                required
-                pattern="[A-Za-z ]+"
-                title="Only alphabets allowed"
-            >
+        <!-- ABOUT  -->
+        <section id="about" class="section about container">
+            <h2>Our Story</h2>
+            <p>
+                Rooted in family tradition, Skewers & Co. blends heritage grilling techniques
+                with a modern culinary approach. Every dish is flame-kissed for unforgettable flavor.
+            </p>
 
-            <!-- Email: proper email validation -->
-            <input
-                type="email"
-                placeholder="Email"
-                required
-            >
+        <!-- CHEFS SECTION -->
+            <div class="chefs-container">
 
-            <!-- Message -->
-            <textarea
-                placeholder="Message"
-                required
-                minlength="5"
-            ></textarea>
+                <div class="chef-card">
+                    <img src="images/chef1.jpg" alt="Master Chef Ayan Rao">
+                    <h3>Chef Ayan Rao</h3>
+                    <p>Specialist in Indian slow-grill recipes, known for his secret spice blends.</p>
+                </div>
 
-            <button type="submit">Submit</button>
-        </div>
-    </div>
-</section>
+                <div class="chef-card">
+                    <img src="images/chef3.jpg" alt="Grill Expert Lena Parker">
+                    <h3>Chef Lena Parker</h3>
+                    <p>International grill expert with 12+ years of global culinary experience.</p>
+                </div>
+
+                <div class="chef-card">
+                    <img src="images/chef2.jpg" alt="Chef Michael">
+                    <h3>Chef Michael</h3>
+                    <p>Famous for seafood grills and flame-kissed butter shrimp specials.</p>
+                </div>
+
+                <div class="chef-card">
+                    <img src="images/chef4.jpg" alt="Chef Ishika Verma">
+                    <h3>Chef Ishika Verma</h3>
+                    <p>Vegetarian grill artist crafting modern twists on classic paneer dishes.</p>
+                </div>
+
+            </div>
+        </section>
 
 
-</main>
+       <!-- CONTACT -->
+        <section id="contact" class="section contact container">
+            <h2>Get in Touch</h2>
 
-<footer class="site-footer">
-    <p>© 2026 ZestyBites | Team Project</p>
-</footer>
+            <div class="contact-grid">
+
+                <!-- Contact Details -->
+                <div class="contact-info">
+                    <h3>Visit Us</h3>
+                    <address>
+                        Skewers & Co.<br>
+                        123 Grill Street, Flavor Town, FL 45678<br>
+                        Landmark: Opp. City Food Plaza
+                    </address>
+
+                    <h3>Operating Hours</h3>
+                    <p>
+                        Monday - Sunday: <strong>11:00 AM - 10:00 PM</strong><br>
+                        Special Menu Available on Weekends
+                    </p>
+
+                    <h3>Reservations</h3>
+                    <p>
+                        Phone: <strong>+1 555 987 6543</strong><br>
+                        Email: <strong>reservations@skewersco.com</strong>
+                    </p>
+                </div>
+
+    
+
+               <section id="contact" class="section contact container">
+                <h2>Contact Us</h2>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p><strong>Address:</strong> 1st Floor, Above Canteen</p>
+                        <p><strong>Phone:</strong> +91 98765 43210</p>
+                        <p><strong>Email:</strong> zestybites@gmail.com</p>
+                    </div>
+
+                    <div class="contact-form">
+                        <!-- Name: letters only -->
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            required
+                            pattern="[A-Za-z ]+"
+                            title="Only alphabets allowed"
+                        >
+
+                        <!-- Email: proper email validation -->
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            required
+                        >
+
+                        <!-- Message -->
+                        <textarea
+                            placeholder="Message"
+                            required
+                            minlength="5"
+                        ></textarea>
+
+                        <button type="submit">Submit</button>
+                    </div>
+            </div>
+        </section>
+
+    
+
+    </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-inner container">
+                <p>&copy; 2025 Skewers & Co. | Designed for a World-Class Dining Experience</p>
+                <p>Follow Us:
+                    <a href="#">Instagram</a> |
+                    <a href="#">Facebook</a> |
+                    <a href="#">Twitter</a>
+                </p>
+            </div>
+        </footer>
 
 </body>
 </html>
